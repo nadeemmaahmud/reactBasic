@@ -20,7 +20,7 @@ function Feedback() {
 
     let handleForm = (e) => {
         e.preventDefault()
-        if (formData.name.trim() === '' && formData.message.trim() === '') return
+        if (formData.name.trim() === '' || formData.message.trim() === '') return
         setFeedBacks(prev => [...prev, formData])
         setFormData({name:'', message:''})
     }
